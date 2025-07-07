@@ -4,10 +4,10 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
 
 # Ganti dengan token bot kamu
-BOT_TOKEN = "7834641455:AAHZ9zqT1NvV39o6WANeGyR-x6w-Xc698_A"
+BOT_TOKEN = "BOT_TOKEN"
 
 # Ganti dengan API Key Unsplash kamu
-UNSPLASH_ACCESS_KEY = "TpPOIXVKfag9vVxBnR_MzGWH7emyXfm2Dc1C2vkbE9c"
+UNSPLASH_ACCESS_KEY = "UNSPLASH_ACCESS_KEY"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot)
