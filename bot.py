@@ -4,8 +4,12 @@ from telegram import Update, InputMediaPhoto
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # Konfigurasi Token Bot dan Unsplash API Key
-TELEGRAM_BOT_TOKEN = "7834641455:AAHZ9zqT1NvV39o6WANeGyR-x6w-Xc698_A"
-UNSPLASH_ACCESS_KEY = "oZZeDnCq0lFi5r11Fj22pMFg5FLbqTHpvP7ZbA57pQ8"
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
+
+if not TELEGRAM_BOT_TOKEN or not UNSPLASH_ACCESS_KEY:
+    print("Error: TELEGRAM_BOT_TOKEN atau UNSPLASH_ACCESS_KEY tidak ditemukan di environment variables.")
+    exit(1)
 
 # URL API Unsplash
 UNSPLASH_API_URL = "https://api.unsplash.com/search/photos"
